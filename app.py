@@ -10,7 +10,7 @@ model = joblib.load('model_intent.pkl')
 tfidf = joblib.load('tfidf_vectorizer.pkl')
 
 st.set_page_config(page_title="Pelayanan Publik Kelurahan DKI Jakarta", page_icon="🏛️")
-st.title("🏛️ Chatbot Pelayanan Terpadu Kelurahan" anchor=False)
+st.title("🏛️ Chatbot Pelayanan Terpadu Kelurahan", anchor=False)
 st.caption("Sistem Informasi Kependudukan & Antrean Digital DKI Jakarta")
 
 # Initialize Memory State
