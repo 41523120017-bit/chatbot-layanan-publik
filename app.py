@@ -101,7 +101,7 @@ if user_input:
                 f"📍 **Lokasi:** Kantor Kelurahan Domisili Anda (DKI Jakarta)\n"
                 f"🔢 **Nomor Antrean:** `{nomor_antrean}`\n"
                 f"📅 **Tanggal Kedatangan:** {tanggal}\n"
-                f"⏰ **Jam Layanan:** 08:00 - 11:00 WIB\n\n"
+                f"⏰ **Jam Layanan:** 08:00 - 15:00 WIB\n\n"
                 f"*Tunjukkan QR Code di bawah ini kepada petugas loket saat Anda tiba:*"
             )
             st.session_state.state = "NORMAL"
