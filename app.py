@@ -164,20 +164,16 @@ if user_input:
     log_conversation(user_input, predicted_intent, extracted_slots, bot_response)
     # ==========================================
 # ==========================================
-# FITUR REKAP LOG KHUSUS ADMIN (DENGAN PASSWORD)
 # ==========================================
-with st.sidebar:
-    st.header("🔒 Khusus Admin")
-    st.caption("Akses terbatas untuk mengunduh log percakapan.")
-    
-    # Input Password
-    input_password = st.text_input("Masukkan Password Admin:", type="password")
-    
-    # Tentukan password Anda di sini (misal: admin123)
-    PASSWORD_ADMIN = "admin123" 
-    
-    if input_password == PASSWORD_ADMIN:
-        st.success("Akses Diberikan! Khusus Admin.")
+# FITUR REKAP LOG TERSEMBUNYI (VIA SECRET URL)
+# ==========================================
+# Cek apakah URL berisi parameter khusus '?admin=1234'
+query_params = st.query_params
+
+if query_params.get("admin") == "1234":
+    with st.sidebar:
+        st.header("📊 Menu Admin (Tersembunyi)")
+        st.caption("Modus khusus admin aktif via URL rahasia.")
         try:
             with open("chat_log.json", "r") as f:
                 log_data = f.read()
@@ -190,6 +186,3 @@ with st.sidebar:
             )
         except FileNotFoundError:
             st.info("Belum ada log percakapan tersimpan.")
-            
-    elif input_password != "":
-        st.error("Password Salah! Akses Ditolak.")
