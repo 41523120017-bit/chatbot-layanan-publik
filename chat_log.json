@@ -1,0 +1,132 @@
+[
+    {
+        "timestamp": "2026-07-22 13:58:09",
+        "user_input": "halo bagaimana cara nya membuat ktp elektronik",
+        "predicted_intent": "tanya_syarat",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccb **Persyaratan Pembuatan KTP-el / KK:**\n1. Fotokopi Kartu Keluarga\n2. Surat Pengantar RT/RW\n3. Akta Kelahiran (untuk pemula)"
+    },
+    {
+        "timestamp": "2026-07-22 14:00:50",
+        "user_input": "jam berapa kantor kelurahan tutup?",
+        "predicted_intent": "tanya_jam_operasional",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udd52 **Jam Operasional Pelayanan:**\n- Senin - Jumat: 08:00 - 15:00 WIB\n- Sabtu & Minggu / Hari Libur Nasional: **Tutup**"
+    },
+    {
+        "timestamp": "2026-07-22 14:01:28",
+        "user_input": "Saya mau buat janji antrean tanggal 28-10-2026",
+        "predicted_intent": "buat_janji_temu",
+        "extracted_slots": {
+            "tanggal": "28-10-2026"
+        },
+        "bot_response": "\ud83d\udccc Anda mengajukan antrean untuk tanggal **28-10-2026**. Apakah data ini sudah benar? *(Ya / Tidak)*"
+    },
+    {
+        "timestamp": "2026-07-22 14:01:37",
+        "user_input": "ya",
+        "predicted_intent": "N/A",
+        "extracted_slots": {},
+        "bot_response": "\u2705 Berhasil! Antrean Anda untuk tanggal **28-10-2026** telah terdaftar. Silakan datang sesuai jadwal."
+    },
+    {
+        "timestamp": "2026-07-22 14:04:58",
+        "user_input": "Bentar, syarat KTP apa aja?",
+        "predicted_intent": "tanya_syarat",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccb **Persyaratan Pembuatan KTP-el / KK:**\n1. Fotokopi Kartu Keluarga\n2. Surat Pengantar RT/RW\n3. Akta Kelahiran (untuk pemula)"
+    },
+    {
+        "timestamp": "2026-07-22 14:05:33",
+        "user_input": "Jam berapa buka untuk bikin KK? dan syarat nya apa",
+        "predicted_intent": "tanya_syarat",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccb **Persyaratan Pembuatan KTP-el / KK:**\n1. Fotokopi Kartu Keluarga\n2. Surat Pengantar RT/RW\n3. Akta Kelahiran (untuk pemula)"
+    },
+    {
+        "timestamp": "2026-07-22 14:05:36",
+        "user_input": "Jam berapa buka untuk bikin KK?",
+        "predicted_intent": "tanya_jam_operasional",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udd52 **Jam Operasional Pelayanan:**\n- Senin - Jumat: 08:00 - 15:00 WIB\n- Sabtu & Minggu / Hari Libur Nasional: **Tutup**"
+    },
+    {
+        "timestamp": "2026-07-22 14:06:05",
+        "user_input": "Mau booking antrean tanggal 25 Oktober 2026",
+        "predicted_intent": "buat_janji_temu",
+        "extracted_slots": {},
+        "bot_response": "Sebutkan tanggal kedatangan Anda dengan format tanggal yang jelas (Contoh: *'Mau antrean tanggal 25-10-2026'*)."
+    },
+    {
+        "timestamp": "2026-07-22 14:07:24",
+        "user_input": "kelurahan mana yang saya datengi untuk daerah jakarta",
+        "predicted_intent": "konfirmasi",
+        "extracted_slots": {},
+        "bot_response": "Ada yang bisa saya bantu terkait persyaratan layanan atau jadwal antrean?"
+    },
+    {
+        "timestamp": "2026-07-22 14:12:26",
+        "user_input": "syrt ny ap sj",
+        "predicted_intent": "konfirmasi",
+        "extracted_slots": {},
+        "bot_response": "Ada yang bisa saya bantu terkait persyaratan layanan atau jadwal antrean?"
+    },
+    {
+        "timestamp": "2026-07-22 14:15:29",
+        "user_input": "halo saya ingin membuat ktp",
+        "predicted_intent": "tanya_syarat",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccb **Persyaratan Layanan Kependudukan:**\n1. Fotokopi Kartu Keluarga (KK)\n2. Surat Pengantar RT/RW setempat\n3. KTP Lama (jika rusak/perpanjangan) / Akta Kelahiran (untuk pemula)"
+    },
+    {
+        "timestamp": "2026-07-22 14:15:39",
+        "user_input": "di daerah jakarta barat dimana ya",
+        "predicted_intent": "tanya_lokasi",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccd **Informasi Lokasi Pelayanan DKI Jakarta:**\n\nSesuai dengan ketentuan Dinas Dukcapil DKI Jakarta, Anda dapat mendatangi **Kantor Kelurahan sesuai alamat domisili yang tertera pada KTP / KK Anda**.\n\nPelayanan administrasi kependudukan (KTP-el, KK, Akta) diproses di loket **Pelayanan Terpadu Satu Pintu (PTSP) Kelurahan** domisili Anda."
+    },
+    {
+        "timestamp": "2026-07-22 14:15:57",
+        "user_input": "saya ingin mebuat antrian",
+        "predicted_intent": "buat_janji_temu",
+        "extracted_slots": {},
+        "bot_response": "Sebutkan tanggal kedatangan Anda dengan format angka (Contoh: *'Mau antrean tanggal 25-10-2026'*)."
+    },
+    {
+        "timestamp": "2026-07-22 14:16:13",
+        "user_input": "mau antrian tanggal 25-10-2026",
+        "predicted_intent": "buat_janji_temu",
+        "extracted_slots": {
+            "tanggal": "25-10-2026"
+        },
+        "bot_response": "\ud83d\udccc Anda mengajukan antrean ke Kelurahan untuk tanggal **25-10-2026**. Apakah data ini sudah benar? *(Ya / Tidak)*"
+    },
+    {
+        "timestamp": "2026-07-22 14:16:15",
+        "user_input": "ya",
+        "predicted_intent": "N/A",
+        "extracted_slots": {},
+        "bot_response": "\u2705 **ANTREAN BERHASIL TERDAFTAR!**\n\n\ud83d\udccd **Lokasi:** Kantor Kelurahan Domisili Anda (DKI Jakarta)\n\ud83d\udd22 **Nomor Antrean:** `A-564`\n\ud83d\udcc5 **Tanggal Kedatangan:** 25-10-2026\n\u23f0 **Jam Layanan:** 08:00 - 11:00 WIB\n\n*Tunjukkan QR Code di bawah ini kepada petugas loket saat Anda tiba:*"
+    },
+    {
+        "timestamp": "2026-07-22 14:17:22",
+        "user_input": "syrt nya apa",
+        "predicted_intent": "tanya_syarat",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccb **Persyaratan Layanan Kependudukan:**\n1. Fotokopi Kartu Keluarga (KK)\n2. Surat Pengantar RT/RW setempat\n3. KTP Lama (jika rusak/perpanjangan) / Akta Kelahiran (untuk pemula)"
+    },
+    {
+        "timestamp": "2026-07-22 14:17:28",
+        "user_input": "apakah saya harus masukan gmail",
+        "predicted_intent": "tanya_lokasi",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udccd **Informasi Lokasi Pelayanan DKI Jakarta:**\n\nSesuai dengan ketentuan Dinas Dukcapil DKI Jakarta, Anda dapat mendatangi **Kantor Kelurahan sesuai alamat domisili yang tertera pada KTP / KK Anda**.\n\nPelayanan administrasi kependudukan (KTP-el, KK, Akta) diproses di loket **Pelayanan Terpadu Satu Pintu (PTSP) Kelurahan** domisili Anda."
+    },
+    {
+        "timestamp": "2026-07-22 14:18:06",
+        "user_input": "jam berapa kelurahan operasional",
+        "predicted_intent": "tanya_jam_operasional",
+        "extracted_slots": {},
+        "bot_response": "\ud83d\udd52 **Jam Operasional Kantor Kelurahan DKI Jakarta:**\n- Senin s/d Jumat: 08.00 - 15.00 WIB\n- Sabtu, Minggu & Hari Libur Nasional: **Tutup**"
+    }
+]
