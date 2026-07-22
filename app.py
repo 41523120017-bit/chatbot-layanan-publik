@@ -163,21 +163,33 @@ if user_input:
     # Save to JSON Log
     log_conversation(user_input, predicted_intent, extracted_slots, bot_response)
     # ==========================================
-# FITUR REKAP / DOWNLOAD LOG UNTUK ADMIN
+# ==========================================
+# FITUR REKAP LOG KHUSUS ADMIN (DENGAN PASSWORD)
 # ==========================================
 with st.sidebar:
-    st.header("📊 Menu Admin / Evaluasi")
-    st.caption("Unduh log percakapan pengguna untuk kebutuhan rekap/laporan.")
+    st.header("🔒 Khusus Admin")
+    st.caption("Akses terbatas untuk mengunduh log percakapan.")
     
-    try:
-        with open("chat_log.json", "r") as f:
-            log_data = f.read()
+    # Input Password
+    input_password = st.text_input("Masukkan Password Admin:", type="password")
+    
+    # Tentukan password Anda di sini (misal: admin123)
+    PASSWORD_ADMIN = "admin123" 
+    
+    if input_password == PASSWORD_ADMIN:
+        st.success("Akses Diberikan! Khusus Admin.")
+        try:
+            with open("chat_log.json", "r") as f:
+                log_data = f.read()
+                
+            st.download_button(
+                label="📥 Download Chat Log (JSON)",
+                data=log_data,
+                file_name="chat_log_online.json",
+                mime="application/json"
+            )
+        except FileNotFoundError:
+            st.info("Belum ada log percakapan tersimpan.")
             
-        st.download_button(
-            label="📥 Download Chat Log (JSON)",
-            data=log_data,
-            file_name="chat_log_online.json",
-            mime="application/json"
-        )
-    except FileNotFoundError:
-        st.info("Belum ada log percakapan tersimpan.")
+    elif input_password != "":
+        st.error("Password Salah! Akses Ditolak.")
