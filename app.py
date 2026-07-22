@@ -99,7 +99,7 @@ if user_input:
             bot_response = (
                 f"✅ **ANTREAN BERHASIL TERDAFTAR!**\n\n"
                 f"📍 **Lokasi:** Kantor Kelurahan Domisili Anda (DKI Jakarta)\n"
-                f"🔢 **Nomor Antrean:** `{nomor_antrean}`\n"
+                f" **Nomor Antrean:** `{nomor_antrean}`\n"
                 f"📅 **Tanggal Kedatangan:** {tanggal}\n"
                 f"⏰ **Jam Layanan:** 08:00 - 15:00 WIB\n\n"
                 f"*Tunjukkan QR Code di bawah ini kepada petugas loket saat Anda tiba:*"
@@ -134,8 +134,10 @@ if user_input:
             bot_response = "🕒 **Jam Operasional Kantor Kelurahan DKI Jakarta:**\n- Senin s/d Jumat: 08.00 - 15.00 WIB\n- Sabtu, Minggu & Hari Libur Nasional: **Tutup**"
             
         elif predicted_intent == "buat_janji_temu":
-            # Slot filling menggunakan Regex untuk mengekstrak angka tanggal
-            date_match = re.search(r'\b\d{1,2}[-/]\d{1,2}[-/]\d{2,4}\b', user_input)
+            # Regex Baru: Mendukung angka (20-10-2026) DAN nama bulan (20 Oktober 2026 / 20 Okt 2026)
+            date_pattern = r'\b\d{1,2}[\s\-/]+(?:januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember|jan|feb|mar|apr|jun|jul|agu|ags|okt|nov|des|\d{1,2})[\s\-/]+\d{2,4}\b'
+            
+            date_match = re.search(date_pattern, user_input, re.IGNORECASE)
             if date_match:
                 extracted_date = date_match.group(0)
                 extracted_slots["tanggal"] = extracted_date
@@ -143,7 +145,7 @@ if user_input:
                 st.session_state.state = "WAITING_CONFIRMATION"
                 bot_response = f"📌 Anda mengajukan antrean ke Kelurahan untuk tanggal **{extracted_date}**. Apakah data ini sudah benar? *(Ya / Tidak)*"
             else:
-                bot_response = "Sebutkan tanggal kedatangan Anda dengan format angka (Contoh: *'Mau antrean tanggal 25-10-2026'*)."
+                bot_response = "Sebutkan tanggal kedatangan Anda (Contoh: *'Mau antrean tanggal 20 Oktober 2026'* atau *'20-10-2026'*)."
                 
         elif predicted_intent == "konfirmasi":
             bot_response = "Ada yang bisa saya bantu terkait persyaratan layanan, lokasi Kelurahan, atau jadwal antrean?"
